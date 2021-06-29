@@ -7,7 +7,7 @@ export default function orderByProps(data, order) {
   }
   const result = [];
   for (const prop in data) {
-    if ({}.hasOwnProperty.call(data, prop)) {
+    if (Object.prototype.hasOwnProperty.call(data, prop)) {
       result.push({ key: prop, value: data[prop] });
     }
   }

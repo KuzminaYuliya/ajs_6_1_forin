@@ -29,3 +29,9 @@ test('wrong name sort', () => {
   ];
   expect(orderByProps(obj, order)).toEqual(equalData);
 });
+
+test('test for property from Object.prototype', () => {
+  const obj = Object.create({ name: 'inherited' });
+  const order = ['name', 'money'];
+  expect(orderByProps(obj, order)).toEqual([undefined]);
+});
